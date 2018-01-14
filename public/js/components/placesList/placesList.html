@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="jumbotron bg">
+    <h1>visualiser un lieu</h1>
+  </div>
+</div>
+<search></search>
+<div class="container">
+  <div class="">
+    <div class="row">
+      <div ng-repeat="place in $ctrl.places" class="col-md-3">
+        <div class="img-block">
+          <img ng-src="{{ place.imageUrl }}" alt="{{ place.title }}" class="img-book img-responsive center-block">
+        </div>
+        <div class="margin-block text-center">
+          <h3>{{ place.title }}</h3>
+          <h4><span>by: </span>{{ place.author }}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
