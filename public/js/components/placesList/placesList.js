@@ -1,10 +1,6 @@
 angular.module('app').component('home', {
 
-  templateUrl: 'public/js/components/placesList/placesList.html',
-
-  bindings: {
-    place: '<'
-  },
+  templateUrl: 'js/components/placesList/placesList.html',
 
   controller: function ($log) {
     'ngInject';
