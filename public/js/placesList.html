@@ -1,0 +1,48 @@
+<div class="container-fluid">
+  <div class="jumbotron bg">
+    <h1>visualiser un lieu</h1>
+  </div>
+</div>
+<div id="search">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <form ng-submit="$ctrl.getPlace(searchPlace, searchCity)">
+        <h2>Envie de sortir ? </h2>
+        <div class="row search-places">
+          <div class="col-md-5">
+            <label for="searchCity">Visiter une ville</label>
+            <input type="text" ng-model="searchCity" name="searchCity" class="form-control" placeholder="Bordeaux">
+          </div>
+          <div class="col-md-5">
+            <label for="searchPlace">avec une envie ? </label>
+            <input type="text" ng-model="searchPlace" name="searchCity" class="form-control" placeholder="restaurant">
+          </div>
+          <div class="col-md-2">
+            <a class="btn btn-default" type="submit">rechercher</a>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row center-block">
+    <div ng-repeat="place in $ctrl.places" class="col-md-6 col-md-offset-3 places">
+      <h3>
+        <srong>{{place.venue.name}}</srong> - {{place.venue.categories[0].pluralName}}
+        <span class="pull-right">note : {{place.venue.rating}}/ 10</span>
+      </h3>
+      <h4>informations</h4>
+      <ul>
+        <li>téléphone : {{place.venue.contact.phone}}</li>
+        <li>adresse : {{place.venue.location.formattedAddress[0]}}</li>
+      </ul>
+      <div class="tips">
+        <h4>écouter l'avis de {{place.tips[0].user.firstName}}</h4>
+        <blockquote>{{place.tips[0].text}}</blockquote>
+      </div>
+      <button class="btn btn-info" ng-href="{{place.tips[0].canonicalUrl}}">en savoir plus</button>
+      <hr>
+    </div>
+  </div>
