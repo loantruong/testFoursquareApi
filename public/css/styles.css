@@ -1,1 +1,49 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+body {
+  overflow-x: hidden;
+  background-color: #f6f6f6;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+.jumbotron {
+  color: white;
+}
+
+.jumbotron.bg {
+  background-image: url("../img/bg-title.jpg");
+  background-size: cover;
+  border-radius: inherit;
+}
+
+#search {
+  margin: 2rem 0;
+}
+
+#search .search-places {
+  padding: 2rem 0;
+}
+
+#search .search-places > div {
+  display: inline-block;
+  vertical-align: bottom;
+  float: none;
+  margin: -2px;
+}
+
+h3 {
+  font-weight: 700;
+}
+
+.tips {
+  padding-top: 3rem;
+  font-style: italic;
+}
+
+hr {
+  margin: 5rem;
+  border-top: 2px dashed #cacaca;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,40 @@
+body{
+  overflow-x: hidden;
+  background-color: #f6f6f6;
+}
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+.jumbotron {
+  &.bg {
+    background-image: url('../img/bg-title.jpg');
+    background-size: cover;
+    border-radius: inherit;
+  }
+  color: white;
+}
+#search{
+  margin: 2rem 0;
+  .search-places{
+    padding: 2rem 0;
+    > div {
+      display: inline-block;
+      vertical-align: bottom;
+      float: none;
+      margin: -2px;
+    }
+  } 
+}
+h3{
+  font-weight: 700;
+}
+.tips{
+  padding-top: 3rem;
+  font-style: italic;
+}
+hr{
+  margin: 5rem;
+  border-top: 2px dashed #cacaca;
+}

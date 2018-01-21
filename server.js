@@ -37,10 +37,10 @@ function foursquare(place, city, expressResponse) {
       client_id: CLIENT_ID,
       client_secret: CLIENT_SECRET,
       ll: '40.7243,-74.0018',
-      section: place,
+      query: place,
       near: city,
       v: '20170801',
-      limit: 1
+      limit: 10
     }
   }, function (err, res, body) {
     if (err) {
